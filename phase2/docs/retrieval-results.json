@@ -1,0 +1,520 @@
+{
+  "protocol": "Ten author-created positive phrasings and six unsupported probes, frozen before first evaluation. Small synthetic smoke set, not independent human validation. No tuning on these results.",
+  "positive_top1_correct": 9,
+  "positive_count": 10,
+  "positive": [
+    {
+      "query": "I press the coffee button but nothing comes through the brew head",
+      "expected": "P01",
+      "top_candidate": "P01",
+      "correct_top1": true,
+      "milliseconds": 727.18,
+      "result": {
+        "status": "clarify",
+        "message": "Confirm the symptom and a supported cause before choosing a procedure.",
+        "preview": true,
+        "candidates": [
+          {
+            "procedure_id": "P01",
+            "symptom": "Water does not flow from the group head",
+            "score": 0.5457,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P05",
+            "symptom": "Espresso leaks around the portafilter edge",
+            "score": 0.4512,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P10",
+            "symptom": "Water leaks from the machine",
+            "score": 0.3614,
+            "status": "draft"
+          }
+        ],
+        "score_note": "Cosine similarity; not a probability. No repair is automatically selected."
+      }
+    },
+    {
+      "query": "The reservoir is empty and the machine isn't dispensing water",
+      "expected": "P01",
+      "top_candidate": "P01",
+      "correct_top1": true,
+      "milliseconds": 10.87,
+      "result": {
+        "status": "clarify",
+        "message": "Confirm the symptom and a supported cause before choosing a procedure.",
+        "preview": true,
+        "candidates": [
+          {
+            "procedure_id": "P01",
+            "symptom": "Water does not flow from the group head",
+            "score": 0.6003,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P10",
+            "symptom": "Water leaks from the machine",
+            "score": 0.5803,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P05",
+            "symptom": "Espresso leaks around the portafilter edge",
+            "score": 0.3487,
+            "status": "draft"
+          }
+        ],
+        "score_note": "Cosine similarity; not a probability. No repair is automatically selected."
+      }
+    },
+    {
+      "query": "My espresso maker has stopped delivering water",
+      "expected": "P01",
+      "top_candidate": "P10",
+      "correct_top1": false,
+      "milliseconds": 8.53,
+      "result": {
+        "status": "clarify",
+        "message": "Confirm the symptom and a supported cause before choosing a procedure.",
+        "preview": true,
+        "candidates": [
+          {
+            "procedure_id": "P10",
+            "symptom": "Water leaks from the machine",
+            "score": 0.5057,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P01",
+            "symptom": "Water does not flow from the group head",
+            "score": 0.5006,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P05",
+            "symptom": "Espresso leaks around the portafilter edge",
+            "score": 0.4921,
+            "status": "draft"
+          }
+        ],
+        "score_note": "Cosine similarity; not a probability. No repair is automatically selected."
+      }
+    },
+    {
+      "query": "There is no flow out of the group head",
+      "expected": "P01",
+      "top_candidate": "P01",
+      "correct_top1": true,
+      "milliseconds": 8.07,
+      "result": {
+        "status": "clarify",
+        "message": "Confirm the symptom and a supported cause before choosing a procedure.",
+        "preview": true,
+        "candidates": [
+          {
+            "procedure_id": "P01",
+            "symptom": "Water does not flow from the group head",
+            "score": 0.6848,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P05",
+            "symptom": "Espresso leaks around the portafilter edge",
+            "score": 0.4014,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P10",
+            "symptom": "Water leaks from the machine",
+            "score": 0.2614,
+            "status": "draft"
+          }
+        ],
+        "score_note": "Cosine similarity; not a probability. No repair is automatically selected."
+      }
+    },
+    {
+      "query": "Coffee is escaping from the sides of the handle",
+      "expected": "P05",
+      "top_candidate": "P05",
+      "correct_top1": true,
+      "milliseconds": 9.84,
+      "result": {
+        "status": "clarify",
+        "message": "Confirm the symptom and a supported cause before choosing a procedure.",
+        "preview": true,
+        "candidates": [
+          {
+            "procedure_id": "P05",
+            "symptom": "Espresso leaks around the portafilter edge",
+            "score": 0.6448,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P10",
+            "symptom": "Water leaks from the machine",
+            "score": 0.4506,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P01",
+            "symptom": "Water does not flow from the group head",
+            "score": 0.4452,
+            "status": "draft"
+          }
+        ],
+        "score_note": "Cosine similarity; not a probability. No repair is automatically selected."
+      }
+    },
+    {
+      "query": "The seal around the filter holder is leaking espresso",
+      "expected": "P05",
+      "top_candidate": "P05",
+      "correct_top1": true,
+      "milliseconds": 9.78,
+      "result": {
+        "status": "clarify",
+        "message": "Confirm the symptom and a supported cause before choosing a procedure.",
+        "preview": true,
+        "candidates": [
+          {
+            "procedure_id": "P05",
+            "symptom": "Espresso leaks around the portafilter edge",
+            "score": 0.7821,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P10",
+            "symptom": "Water leaks from the machine",
+            "score": 0.5172,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P01",
+            "symptom": "Water does not flow from the group head",
+            "score": 0.421,
+            "status": "draft"
+          }
+        ],
+        "score_note": "Cosine similarity; not a probability. No repair is automatically selected."
+      }
+    },
+    {
+      "query": "The basket rim has grounds and coffee is coming around the edge",
+      "expected": "P05",
+      "top_candidate": "P05",
+      "correct_top1": true,
+      "milliseconds": 9.56,
+      "result": {
+        "status": "clarify",
+        "message": "Confirm the symptom and a supported cause before choosing a procedure.",
+        "preview": true,
+        "candidates": [
+          {
+            "procedure_id": "P05",
+            "symptom": "Espresso leaks around the portafilter edge",
+            "score": 0.4751,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P10",
+            "symptom": "Water leaks from the machine",
+            "score": 0.3974,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P01",
+            "symptom": "Water does not flow from the group head",
+            "score": 0.3734,
+            "status": "draft"
+          }
+        ],
+        "score_note": "Cosine similarity; not a probability. No repair is automatically selected."
+      }
+    },
+    {
+      "query": "There is a puddle underneath the machine",
+      "expected": "P10",
+      "top_candidate": "P10",
+      "correct_top1": true,
+      "milliseconds": 7.61,
+      "result": {
+        "status": "clarify",
+        "message": "Confirm the symptom and a supported cause before choosing a procedure.",
+        "preview": true,
+        "candidates": [
+          {
+            "procedure_id": "P10",
+            "symptom": "Water leaks from the machine",
+            "score": 0.5329,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P01",
+            "symptom": "Water does not flow from the group head",
+            "score": 0.3225,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P05",
+            "symptom": "Espresso leaks around the portafilter edge",
+            "score": 0.2707,
+            "status": "draft"
+          }
+        ],
+        "score_note": "Cosine similarity; not a probability. No repair is automatically selected."
+      }
+    },
+    {
+      "query": "Water spills out when the drip tray is full",
+      "expected": "P10",
+      "top_candidate": "P10",
+      "correct_top1": true,
+      "milliseconds": 9.26,
+      "result": {
+        "status": "clarify",
+        "message": "Confirm the symptom and a supported cause before choosing a procedure.",
+        "preview": true,
+        "candidates": [
+          {
+            "procedure_id": "P10",
+            "symptom": "Water leaks from the machine",
+            "score": 0.7997,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P05",
+            "symptom": "Espresso leaks around the portafilter edge",
+            "score": 0.451,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P01",
+            "symptom": "Water does not flow from the group head",
+            "score": 0.4333,
+            "status": "draft"
+          }
+        ],
+        "score_note": "Cosine similarity; not a probability. No repair is automatically selected."
+      }
+    },
+    {
+      "query": "The tank is sitting high and water is leaking onto the bench",
+      "expected": "P10",
+      "top_candidate": "P10",
+      "correct_top1": true,
+      "milliseconds": 10.53,
+      "result": {
+        "status": "clarify",
+        "message": "Confirm the symptom and a supported cause before choosing a procedure.",
+        "preview": true,
+        "candidates": [
+          {
+            "procedure_id": "P10",
+            "symptom": "Water leaks from the machine",
+            "score": 0.4878,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P01",
+            "symptom": "Water does not flow from the group head",
+            "score": 0.4364,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P05",
+            "symptom": "Espresso leaks around the portafilter edge",
+            "score": 0.3531,
+            "status": "draft"
+          }
+        ],
+        "score_note": "Cosine similarity; not a probability. No repair is automatically selected."
+      }
+    }
+  ],
+  "unsupported": [
+    {
+      "query": "The electrical cord is sparking",
+      "result": {
+        "status": "no_match",
+        "message": "No sufficiently close procedure. Contact support.",
+        "preview": true,
+        "candidates": [
+          {
+            "procedure_id": "P01",
+            "symptom": "Water does not flow from the group head",
+            "score": 0.1215,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P05",
+            "symptom": "Espresso leaks around the portafilter edge",
+            "score": 0.1198,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P10",
+            "symptom": "Water leaks from the machine",
+            "score": 0.0915,
+            "status": "draft"
+          }
+        ],
+        "score_note": "Cosine similarity; not a probability. No repair is automatically selected."
+      }
+    },
+    {
+      "query": "Please open the housing and replace the pump",
+      "result": {
+        "status": "clarify",
+        "message": "Confirm the symptom and a supported cause before choosing a procedure.",
+        "preview": true,
+        "candidates": [
+          {
+            "procedure_id": "P01",
+            "symptom": "Water does not flow from the group head",
+            "score": 0.3971,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P10",
+            "symptom": "Water leaks from the machine",
+            "score": 0.2732,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P05",
+            "symptom": "Espresso leaks around the portafilter edge",
+            "score": 0.2584,
+            "status": "draft"
+          }
+        ],
+        "score_note": "Cosine similarity; not a probability. No repair is automatically selected."
+      }
+    },
+    {
+      "query": "The milk is not hot enough",
+      "result": {
+        "status": "clarify",
+        "message": "Confirm the symptom and a supported cause before choosing a procedure.",
+        "preview": true,
+        "candidates": [
+          {
+            "procedure_id": "P01",
+            "symptom": "Water does not flow from the group head",
+            "score": 0.4102,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P10",
+            "symptom": "Water leaks from the machine",
+            "score": 0.2487,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P05",
+            "symptom": "Espresso leaks around the portafilter edge",
+            "score": 0.2028,
+            "status": "draft"
+          }
+        ],
+        "score_note": "Cosine similarity; not a probability. No repair is automatically selected."
+      }
+    },
+    {
+      "query": "How do I run a descaling cycle?",
+      "result": {
+        "status": "no_match",
+        "message": "No sufficiently close procedure. Contact support.",
+        "preview": true,
+        "candidates": [
+          {
+            "procedure_id": "P10",
+            "symptom": "Water leaks from the machine",
+            "score": 0.0287,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P01",
+            "symptom": "Water does not flow from the group head",
+            "score": 0.0256,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P05",
+            "symptom": "Espresso leaks around the portafilter edge",
+            "score": -0.0873,
+            "status": "draft"
+          }
+        ],
+        "score_note": "Cosine similarity; not a probability. No repair is automatically selected."
+      }
+    },
+    {
+      "query": "The grinder motor is broken",
+      "result": {
+        "status": "no_match",
+        "message": "No sufficiently close procedure. Contact support.",
+        "preview": true,
+        "candidates": [
+          {
+            "procedure_id": "P05",
+            "symptom": "Espresso leaks around the portafilter edge",
+            "score": 0.2905,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P10",
+            "symptom": "Water leaks from the machine",
+            "score": 0.2442,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P01",
+            "symptom": "Water does not flow from the group head",
+            "score": 0.2187,
+            "status": "draft"
+          }
+        ],
+        "score_note": "Cosine similarity; not a probability. No repair is automatically selected."
+      }
+    },
+    {
+      "query": "My washing machine will not spin",
+      "result": {
+        "status": "no_match",
+        "message": "No sufficiently close procedure. Contact support.",
+        "preview": true,
+        "candidates": [
+          {
+            "procedure_id": "P10",
+            "symptom": "Water leaks from the machine",
+            "score": 0.2566,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P01",
+            "symptom": "Water does not flow from the group head",
+            "score": 0.2503,
+            "status": "draft"
+          },
+          {
+            "procedure_id": "P05",
+            "symptom": "Espresso leaks around the portafilter edge",
+            "score": 0.0761,
+            "status": "draft"
+          }
+        ],
+        "score_note": "Cosine similarity; not a probability. No repair is automatically selected."
+      }
+    }
+  ],
+  "unsupported_no_match_count": 4,
+  "automatic_procedure_selection": false,
+  "live_search_before_review": {
+    "status": "no_match",
+    "message": "No published procedure is available. Contact support.",
+    "candidates": []
+  }
+}

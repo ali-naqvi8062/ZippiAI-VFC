@@ -1,0 +1,391 @@
+{
+  "$defs": {
+    "Cause": {
+      "additionalProperties": false,
+      "properties": {
+        "cause_id": {
+          "pattern": "^[a-z][a-z0-9_]{1,63}$",
+          "title": "Cause Id",
+          "type": "string"
+        },
+        "description": {
+          "maxLength": 500,
+          "minLength": 5,
+          "title": "Description",
+          "type": "string"
+        },
+        "confirmation_question": {
+          "maxLength": 500,
+          "minLength": 5,
+          "title": "Confirmation Question",
+          "type": "string"
+        }
+      },
+      "required": [
+        "cause_id",
+        "description",
+        "confirmation_question"
+      ],
+      "title": "Cause",
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "manual",
+            "project_policy"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "pdf_page": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Pdf Page"
+        },
+        "region": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Region"
+        },
+        "policy_id": {
+          "anyOf": [
+            {
+              "const": "unplugged_only_v1",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Policy Id"
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "Part": {
+      "additionalProperties": false,
+      "properties": {
+        "part_id": {
+          "pattern": "^[a-z][a-z0-9_]{1,63}$",
+          "title": "Part Id",
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 150,
+          "minLength": 2,
+          "title": "Name",
+          "type": "string"
+        },
+        "aliases": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 12,
+          "title": "Aliases",
+          "type": "array"
+        },
+        "reference_image": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reference Image"
+        },
+        "diagram_label": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Diagram Label"
+        }
+      },
+      "required": [
+        "part_id",
+        "name"
+      ],
+      "title": "Part",
+      "type": "object"
+    },
+    "Procedure": {
+      "additionalProperties": false,
+      "properties": {
+        "appliance_id": {
+          "pattern": "^[a-z0-9][a-z0-9_-]{1,79}$",
+          "title": "Appliance Id",
+          "type": "string"
+        },
+        "manual_version": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Manual Version",
+          "type": "string"
+        },
+        "procedure_id": {
+          "pattern": "^[A-Za-z0-9_-]{1,64}$",
+          "title": "Procedure Id",
+          "type": "string"
+        },
+        "procedure_version": {
+          "default": 1,
+          "minimum": 1,
+          "title": "Procedure Version",
+          "type": "integer"
+        },
+        "status": {
+          "default": "draft",
+          "enum": [
+            "draft",
+            "published"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "reviewer": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewer"
+        },
+        "reviewed_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewed At"
+        },
+        "symptom": {
+          "maxLength": 500,
+          "minLength": 5,
+          "title": "Symptom",
+          "type": "string"
+        },
+        "symptom_aliases": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 20,
+          "title": "Symptom Aliases",
+          "type": "array"
+        },
+        "causes": {
+          "items": {
+            "$ref": "#/$defs/Cause"
+          },
+          "maxItems": 20,
+          "minItems": 1,
+          "title": "Causes",
+          "type": "array"
+        },
+        "parts": {
+          "items": {
+            "$ref": "#/$defs/Part"
+          },
+          "maxItems": 40,
+          "minItems": 1,
+          "title": "Parts",
+          "type": "array"
+        },
+        "steps": {
+          "items": {
+            "$ref": "#/$defs/Step"
+          },
+          "maxItems": 40,
+          "minItems": 3,
+          "title": "Steps",
+          "type": "array"
+        },
+        "scope_note": {
+          "maxLength": 1500,
+          "minLength": 10,
+          "title": "Scope Note",
+          "type": "string"
+        },
+        "entry_condition": {
+          "const": "Machine is off and idle; no active pressure or steam cycle.",
+          "default": "Machine is off and idle; no active pressure or steam cycle.",
+          "title": "Entry Condition",
+          "type": "string"
+        },
+        "result_label": {
+          "const": "Intervention completed; outcome unverified.",
+          "default": "Intervention completed; outcome unverified.",
+          "title": "Result Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "appliance_id",
+        "manual_version",
+        "procedure_id",
+        "symptom",
+        "causes",
+        "parts",
+        "steps",
+        "scope_note"
+      ],
+      "title": "Procedure",
+      "type": "object"
+    },
+    "Step": {
+      "additionalProperties": false,
+      "properties": {
+        "step_id": {
+          "pattern": "^s[0-9]+$",
+          "title": "Step Id",
+          "type": "string"
+        },
+        "part_id": {
+          "title": "Part Id",
+          "type": "string"
+        },
+        "action": {
+          "enum": [
+            "unplug",
+            "confirm_cool",
+            "fill",
+            "seat",
+            "clean",
+            "rotate",
+            "empty",
+            "inspect",
+            "remove",
+            "replace"
+          ],
+          "title": "Action",
+          "type": "string"
+        },
+        "instruction": {
+          "maxLength": 1000,
+          "minLength": 5,
+          "title": "Instruction",
+          "type": "string"
+        },
+        "cause_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Cause Ids",
+          "type": "array"
+        },
+        "source": {
+          "$ref": "#/$defs/Evidence"
+        },
+        "reference_image": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reference Image"
+        },
+        "preconditions": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Preconditions",
+          "type": "array"
+        },
+        "completion_mode": {
+          "const": "tap",
+          "default": "tap",
+          "title": "Completion Mode",
+          "type": "string"
+        },
+        "completion_condition": {
+          "maxLength": 500,
+          "minLength": 5,
+          "title": "Completion Condition",
+          "type": "string"
+        },
+        "safety_class": {
+          "enum": [
+            "project_safety",
+            "unpowered_external"
+          ],
+          "title": "Safety Class",
+          "type": "string"
+        }
+      },
+      "required": [
+        "step_id",
+        "part_id",
+        "action",
+        "instruction",
+        "source",
+        "preconditions",
+        "completion_condition",
+        "safety_class"
+      ],
+      "title": "Step",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "procedures": {
+      "items": {
+        "$ref": "#/$defs/Procedure"
+      },
+      "maxItems": 30,
+      "minItems": 1,
+      "title": "Procedures",
+      "type": "array"
+    }
+  },
+  "required": [
+    "procedures"
+  ],
+  "title": "DraftBundle",
+  "type": "object"
+}

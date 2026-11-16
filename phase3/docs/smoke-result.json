@@ -1,0 +1,52 @@
+{
+  "part_id": "water_tank",
+  "visibility": "candidate",
+  "bbox": [
+    0.26516216962765427,
+    0.1373208895596591,
+    0.7609357002453926,
+    0.5003427216500947
+  ],
+  "score": 0.42232173681259155,
+  "candidates": [
+    {
+      "bbox": [
+        0.26516216962765427,
+        0.1373208895596591,
+        0.7609357002453926,
+        0.5003427216500947
+      ],
+      "score": 0.42232173681259155
+    },
+    {
+      "bbox": [
+        0.15971434177496494,
+        0.025190175374348957,
+        0.8350456042167468,
+        0.9866991447679925
+      ],
+      "score": 0.38764894008636475
+    },
+    {
+      "bbox": [
+        0.25822757818760017,
+        0.13303380792791195,
+        0.7935112586388221,
+        0.7835370058001894
+      ],
+      "score": 0.3638198673725128
+    }
+  ],
+  "model": "IDEA-Research/grounding-dino-tiny",
+  "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "prompt": "the water tank of the coffee machine.",
+  "box_threshold": 0.35,
+  "text_threshold": 0.25,
+  "inference_seconds": 17.306041499832645,
+  "load_seconds": 7.8222630000673234,
+  "total_seconds": 25.128306299913675,
+  "note": "Model candidate, not verified identity. No detection does not prove absence.",
+  "input_kind": "manual_diagram_not_real_photo",
+  "accuracy": "not measured; no ground-truth annotation",
+  "visual_review": "Failed: top candidate covers front housing rather than rear water tank in the manual illustration."
+}

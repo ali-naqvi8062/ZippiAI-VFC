@@ -1,0 +1,624 @@
+{
+  "split": "dev",
+  "image_count": 5,
+  "real_photo_count": 5,
+  "ambiguous_pairs_excluded": 0,
+  "benchmark_sha256": null,
+  "summary": {
+    "visible_pairs": 9,
+    "correct_iou50": 0,
+    "accuracy_iou50": 0.0,
+    "absent_pairs": 2,
+    "false_positive_count": 1
+  },
+  "per_part": {
+    "water_tank": {
+      "visible_pairs": 0,
+      "correct_iou50": 0,
+      "accuracy_iou50": null,
+      "absent_pairs": 0,
+      "false_positive_count": 0
+    },
+    "drip_tray": {
+      "visible_pairs": 3,
+      "correct_iou50": 0,
+      "accuracy_iou50": 0.0,
+      "absent_pairs": 0,
+      "false_positive_count": 0
+    },
+    "portafilter": {
+      "visible_pairs": 1,
+      "correct_iou50": 0,
+      "accuracy_iou50": 0.0,
+      "absent_pairs": 0,
+      "false_positive_count": 0
+    },
+    "filter_basket": {
+      "visible_pairs": 0,
+      "correct_iou50": 0,
+      "accuracy_iou50": null,
+      "absent_pairs": 0,
+      "false_positive_count": 0
+    },
+    "steam_wand": {
+      "visible_pairs": 4,
+      "correct_iou50": 0,
+      "accuracy_iou50": 0.0,
+      "absent_pairs": 0,
+      "false_positive_count": 0
+    },
+    "tank_lid": {
+      "visible_pairs": 0,
+      "correct_iou50": 0,
+      "accuracy_iou50": null,
+      "absent_pairs": 0,
+      "false_positive_count": 0
+    },
+    "control_panel": {
+      "visible_pairs": 1,
+      "correct_iou50": 0,
+      "accuracy_iou50": 0.0,
+      "absent_pairs": 2,
+      "false_positive_count": 1
+    }
+  },
+  "latency_seconds": {
+    "p50": 13.230998600134626,
+    "p95": 16.716596649959683
+  },
+  "records": [
+    {
+      "image_id": "193531dcf7980f9bed0362ffcf30dc6a1ca5a573179a3b6c19cc634bc391ef46",
+      "part_id": "steam_wand",
+      "truth": {
+        "visibility": "visible",
+        "bbox": [
+          0.545,
+          0.26,
+          0.61,
+          0.6
+        ]
+      },
+      "prediction": {
+        "part_id": "steam_wand",
+        "visibility": "candidate",
+        "bbox": [
+          0.4244690358313055,
+          0.181270268758138,
+          0.6084646423006318,
+          0.9347964477539062
+        ],
+        "score": 0.646083652973175,
+        "candidates": [
+          {
+            "bbox": [
+              0.4244690358313055,
+              0.181270268758138,
+              0.6084646423006318,
+              0.9347964477539062
+            ],
+            "score": 0.646083652973175
+          }
+        ],
+        "model": "IDEA-Research/grounding-dino-tiny",
+        "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+        "prompt": "the steam wand of the coffee machine.",
+        "box_threshold": 0.35,
+        "text_threshold": 0.25,
+        "inference_seconds": 14.416157299885526,
+        "load_seconds": 44.01923430012539,
+        "total_seconds": 58.435393100138754,
+        "note": "Model candidate, not verified identity. No detection does not prove absence."
+      },
+      "iou": 0.1550503821247886
+    },
+    {
+      "image_id": "193531dcf7980f9bed0362ffcf30dc6a1ca5a573179a3b6c19cc634bc391ef46",
+      "part_id": "drip_tray",
+      "truth": {
+        "visibility": "visible",
+        "bbox": [
+          0.429,
+          0.735,
+          0.59,
+          0.86
+        ]
+      },
+      "prediction": {
+        "part_id": "drip_tray",
+        "visibility": "candidate",
+        "bbox": [
+          0.4246613549404457,
+          0.18155741373697917,
+          0.6085142542104252,
+          0.9337708536783854
+        ],
+        "score": 0.6307573318481445,
+        "candidates": [
+          {
+            "bbox": [
+              0.4246613549404457,
+              0.18155741373697917,
+              0.6085142542104252,
+              0.9337708536783854
+            ],
+            "score": 0.6307573318481445
+          },
+          {
+            "bbox": [
+              0.4251019420519553,
+              0.778318125406901,
+              0.592376542221653,
+              0.9277425130208333
+            ],
+            "score": 0.39120689034461975
+          }
+        ],
+        "model": "IDEA-Research/grounding-dino-tiny",
+        "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+        "prompt": "the drip tray of the coffee machine.",
+        "box_threshold": 0.35,
+        "text_threshold": 0.25,
+        "inference_seconds": 14.334708099951968,
+        "load_seconds": 1.8998980522155762e-06,
+        "total_seconds": 14.334710599854589,
+        "note": "Model candidate, not verified identity. No detection does not prove absence."
+      },
+      "iou": 0.1455205466165114
+    },
+    {
+      "image_id": "c704999e58a98166b3ed1ab3e36556baed68f10b1579ac51c8b64f7204e7d62c",
+      "part_id": "steam_wand",
+      "truth": {
+        "visibility": "visible",
+        "bbox": [
+          0.537,
+          0.106,
+          0.674,
+          0.666
+        ]
+      },
+      "prediction": {
+        "part_id": "steam_wand",
+        "visibility": "candidate",
+        "bbox": [
+          1.0251998901367188e-05,
+          0,
+          1,
+          0.999237060546875
+        ],
+        "score": 0.5887724161148071,
+        "candidates": [
+          {
+            "bbox": [
+              1.0251998901367188e-05,
+              0,
+              1,
+              0.999237060546875
+            ],
+            "score": 0.5887724161148071
+          },
+          {
+            "bbox": [
+              0.5266121722282248,
+              0.08466887778424202,
+              0.6732725102850732,
+              0.665587924389129
+            ],
+            "score": 0.4330950379371643
+          }
+        ],
+        "model": "IDEA-Research/grounding-dino-tiny",
+        "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+        "prompt": "the steam wand of the coffee machine.",
+        "box_threshold": 0.35,
+        "text_threshold": 0.25,
+        "inference_seconds": 12.665091400034726,
+        "load_seconds": 1.00000761449337e-06,
+        "total_seconds": 12.665093200048432,
+        "note": "Model candidate, not verified identity. No detection does not prove absence."
+      },
+      "iou": 0.07677936454781875
+    },
+    {
+      "image_id": "c704999e58a98166b3ed1ab3e36556baed68f10b1579ac51c8b64f7204e7d62c",
+      "part_id": "control_panel",
+      "truth": {
+        "visibility": "absent",
+        "bbox": null
+      },
+      "prediction": {
+        "part_id": "control_panel",
+        "visibility": "not_detected",
+        "bbox": null,
+        "score": null,
+        "candidates": [],
+        "model": "IDEA-Research/grounding-dino-tiny",
+        "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+        "prompt": "the buttons on the coffee machine control panel.",
+        "box_threshold": 0.35,
+        "text_threshold": 0.25,
+        "inference_seconds": 13.230998600134626,
+        "load_seconds": 1.400010660290718e-06,
+        "total_seconds": 13.231000700034201,
+        "note": "Model candidate, not verified identity. No detection does not prove absence."
+      },
+      "iou": 0.0
+    },
+    {
+      "image_id": "a145706932318bf5471153a6f5cef5680d4c5cab28cecfa89cdeafee925853c6",
+      "part_id": "steam_wand",
+      "truth": {
+        "visibility": "visible",
+        "bbox": [
+          0.51,
+          0.35,
+          0.58,
+          0.57
+        ]
+      },
+      "prediction": {
+        "part_id": "steam_wand",
+        "visibility": "candidate",
+        "bbox": [
+          0.14153114318847657,
+          0.07055547714233398,
+          0.6997445678710937,
+          0.7197900899251302
+        ],
+        "score": 0.6820191740989685,
+        "candidates": [
+          {
+            "bbox": [
+              0.14153114318847657,
+              0.07055547714233398,
+              0.6997445678710937,
+              0.7197900899251302
+            ],
+            "score": 0.6820191740989685
+          },
+          {
+            "bbox": [
+              0.1389869499206543,
+              0.43660400390625,
+              0.34672210693359373,
+              0.6514099629720053
+            ],
+            "score": 0.4838346540927887
+          }
+        ],
+        "model": "IDEA-Research/grounding-dino-tiny",
+        "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+        "prompt": "the steam wand of the coffee machine.",
+        "box_threshold": 0.35,
+        "text_threshold": 0.25,
+        "inference_seconds": 16.101058900123462,
+        "load_seconds": 8.998904377222061e-07,
+        "total_seconds": 16.10106060001999,
+        "note": "Model candidate, not verified identity. No detection does not prove absence."
+      },
+      "iou": 0.042493135547079716
+    },
+    {
+      "image_id": "a145706932318bf5471153a6f5cef5680d4c5cab28cecfa89cdeafee925853c6",
+      "part_id": "drip_tray",
+      "truth": {
+        "visibility": "visible",
+        "bbox": [
+          0.285,
+          0.48,
+          0.49,
+          0.74
+        ]
+      },
+      "prediction": {
+        "part_id": "drip_tray",
+        "visibility": "candidate",
+        "bbox": [
+          0.14068150520324707,
+          0.07008469263712565,
+          0.6994164276123047,
+          0.7200899251302083
+        ],
+        "score": 0.6791922450065613,
+        "candidates": [
+          {
+            "bbox": [
+              0.14068150520324707,
+              0.07008469263712565,
+              0.6994164276123047,
+              0.7200899251302083
+            ],
+            "score": 0.6791922450065613
+          }
+        ],
+        "model": "IDEA-Research/grounding-dino-tiny",
+        "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+        "prompt": "the drip tray of the coffee machine.",
+        "box_threshold": 0.35,
+        "text_threshold": 0.25,
+        "inference_seconds": 17.332134399795905,
+        "load_seconds": 1.100124791264534e-06,
+        "total_seconds": 17.332136099925265,
+        "note": "Model candidate, not verified identity. No detection does not prove absence."
+      },
+      "iou": 0.1340144349026122
+    },
+    {
+      "image_id": "a145706932318bf5471153a6f5cef5680d4c5cab28cecfa89cdeafee925853c6",
+      "part_id": "portafilter",
+      "truth": {
+        "visibility": "visible",
+        "bbox": [
+          0.123,
+          0.39,
+          0.447,
+          0.68
+        ]
+      },
+      "prediction": {
+        "part_id": "portafilter",
+        "visibility": "candidate",
+        "bbox": [
+          0.14049643516540528,
+          0.06992119471232096,
+          0.6996125793457031,
+          0.7192247009277344
+        ],
+        "score": 0.5600375533103943,
+        "candidates": [
+          {
+            "bbox": [
+              0.14049643516540528,
+              0.06992119471232096,
+              0.6996125793457031,
+              0.7192247009277344
+            ],
+            "score": 0.5600375533103943
+          }
+        ],
+        "model": "IDEA-Research/grounding-dino-tiny",
+        "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+        "prompt": "the portafilter handle and basket holder.",
+        "box_threshold": 0.35,
+        "text_threshold": 0.25,
+        "inference_seconds": 15.786807500058785,
+        "load_seconds": 1.0998919606208801e-06,
+        "total_seconds": 15.786809100070968,
+        "note": "Model candidate, not verified identity. No detection does not prove absence."
+      },
+      "iou": 0.24146593242741715
+    },
+    {
+      "image_id": "01b25ac24687e6860a4128436a40aa8ffce89d910a88cbf5745c3b734386680e",
+      "part_id": "steam_wand",
+      "truth": {
+        "visibility": "visible",
+        "bbox": [
+          0.42,
+          0.15,
+          0.59,
+          0.49
+        ]
+      },
+      "prediction": {
+        "part_id": "steam_wand",
+        "visibility": "candidate",
+        "bbox": [
+          0.002069383939107259,
+          0.0013187825679779053,
+          0.7676532389322916,
+          0.8587578938802083
+        ],
+        "score": 0.6245927810668945,
+        "candidates": [
+          {
+            "bbox": [
+              0.002069383939107259,
+              0.0013187825679779053,
+              0.7676532389322916,
+              0.8587578938802083
+            ],
+            "score": 0.6245927810668945
+          },
+          {
+            "bbox": [
+              0.40891312662760415,
+              0.14233104451497397,
+              0.5921874186197916,
+              0.4817603759765625
+            ],
+            "score": 0.40860801935195923
+          }
+        ],
+        "model": "IDEA-Research/grounding-dino-tiny",
+        "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+        "prompt": "the steam wand of the coffee machine.",
+        "box_threshold": 0.35,
+        "text_threshold": 0.25,
+        "inference_seconds": 10.669572800165042,
+        "load_seconds": 6.998889148235321e-07,
+        "total_seconds": 10.669573900057003,
+        "note": "Model candidate, not verified identity. No detection does not prove absence."
+      },
+      "iou": 0.08805049110249218
+    },
+    {
+      "image_id": "01b25ac24687e6860a4128436a40aa8ffce89d910a88cbf5745c3b734386680e",
+      "part_id": "drip_tray",
+      "truth": {
+        "visibility": "visible",
+        "bbox": [
+          0.02,
+          0.435,
+          0.43,
+          0.735
+        ]
+      },
+      "prediction": {
+        "part_id": "drip_tray",
+        "visibility": "candidate",
+        "bbox": [
+          0.0022000967661539713,
+          0.0013765989939371745,
+          0.768381591796875,
+          0.8587484537760417
+        ],
+        "score": 0.6222813129425049,
+        "candidates": [
+          {
+            "bbox": [
+              0.0022000967661539713,
+              0.0013765989939371745,
+              0.768381591796875,
+              0.8587484537760417
+            ],
+            "score": 0.6222813129425049
+          },
+          {
+            "bbox": [
+              0.03363341013590495,
+              0.4410909016927083,
+              0.40788277180989585,
+              0.7390479329427083
+            ],
+            "score": 0.35004428029060364
+          }
+        ],
+        "model": "IDEA-Research/grounding-dino-tiny",
+        "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+        "prompt": "the drip tray of the coffee machine.",
+        "box_threshold": 0.35,
+        "text_threshold": 0.25,
+        "inference_seconds": 10.778285800013691,
+        "load_seconds": 6.998889148235321e-07,
+        "total_seconds": 10.778287000022829,
+        "note": "Model candidate, not verified identity. No detection does not prove absence."
+      },
+      "iou": 0.18724241338223713
+    },
+    {
+      "image_id": "01b25ac24687e6860a4128436a40aa8ffce89d910a88cbf5745c3b734386680e",
+      "part_id": "control_panel",
+      "truth": {
+        "visibility": "absent",
+        "bbox": null
+      },
+      "prediction": {
+        "part_id": "control_panel",
+        "visibility": "candidate",
+        "bbox": [
+          0.0019623934427897135,
+          0.0013860165278116862,
+          0.7630174967447917,
+          0.8584921061197917
+        ],
+        "score": 0.5365766286849976,
+        "candidates": [
+          {
+            "bbox": [
+              0.0019623934427897135,
+              0.0013860165278116862,
+              0.7630174967447917,
+              0.8584921061197917
+            ],
+            "score": 0.5365766286849976
+          },
+          {
+            "bbox": [
+              0.09696967569986979,
+              0.5207502848307292,
+              0.34006184895833336,
+              0.7053860677083333
+            ],
+            "score": 0.3961273431777954
+          }
+        ],
+        "model": "IDEA-Research/grounding-dino-tiny",
+        "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+        "prompt": "the buttons on the coffee machine control panel.",
+        "box_threshold": 0.35,
+        "text_threshold": 0.25,
+        "inference_seconds": 11.148657500045374,
+        "load_seconds": 6.998889148235321e-07,
+        "total_seconds": 11.148658599937335,
+        "note": "Model candidate, not verified identity. No detection does not prove absence."
+      },
+      "iou": 0.0
+    },
+    {
+      "image_id": "ed69be93e840e5c288ea279ac7938c8604416f43042a0956bfcffee05cf4a626",
+      "part_id": "control_panel",
+      "truth": {
+        "visibility": "visible",
+        "bbox": [
+          0.135,
+          0.15,
+          0.622,
+          0.39
+        ]
+      },
+      "prediction": {
+        "part_id": "control_panel",
+        "visibility": "candidate",
+        "bbox": [
+          0.09648031234741211,
+          0.0016920268535614014,
+          0.9956813812255859,
+          0.9953604888916016
+        ],
+        "score": 0.47329989075660706,
+        "candidates": [
+          {
+            "bbox": [
+              0.09648031234741211,
+              0.0016920268535614014,
+              0.9956813812255859,
+              0.9953604888916016
+            ],
+            "score": 0.47329989075660706
+          },
+          {
+            "bbox": [
+              0.2945681571960449,
+              0.24985116958618164,
+              0.3971934509277344,
+              0.34991939544677736
+            ],
+            "score": 0.4565371572971344
+          },
+          {
+            "bbox": [
+              0.4837543487548828,
+              0.2675654983520508,
+              0.591998176574707,
+              0.3775970458984375
+            ],
+            "score": 0.4343830347061157
+          },
+          {
+            "bbox": [
+              0.15734195709228516,
+              0.18519073486328125,
+              0.2382805633544922,
+              0.27316856384277344
+            ],
+            "score": 0.36941665410995483
+          }
+        ],
+        "model": "IDEA-Research/grounding-dino-tiny",
+        "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+        "prompt": "the buttons on the coffee machine control panel.",
+        "box_threshold": 0.35,
+        "text_threshold": 0.25,
+        "inference_seconds": 10.932316400110722,
+        "load_seconds": 8.00006091594696e-07,
+        "total_seconds": 10.932317700004205,
+        "note": "Model candidate, not verified identity. No detection does not prove absence."
+      },
+      "iou": 0.1308102821634869
+    }
+  ],
+  "claim": "Exploratory only; not a held-out benchmark",
+  "run_id": "1793832227551375500"
+}

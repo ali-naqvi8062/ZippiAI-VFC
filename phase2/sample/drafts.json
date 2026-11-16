@@ -1,0 +1,519 @@
+{
+  "procedures": [
+    {
+      "appliance_id": "breville-bes500",
+      "manual_version": "f0a5e4024b1c57996b4a4771dc7ae9b5f29ff931fa915ec4b40569761dd8012f",
+      "procedure_id": "P01",
+      "procedure_version": 1,
+      "status": "draft",
+      "reviewer": null,
+      "reviewed_at": null,
+      "symptom": "Water does not flow from the group head",
+      "symptom_aliases": [
+        "No water comes out",
+        "Coffee is not pouring",
+        "No hot water from the group head"
+      ],
+      "causes": [
+        {
+          "cause_id": "empty_tank",
+          "description": "The water tank is empty.",
+          "confirmation_question": "Is the water tank empty?"
+        },
+        {
+          "cause_id": "loose_tank",
+          "description": "The water tank is not fully seated.",
+          "confirmation_question": "Is the water tank raised or not fully seated?"
+        }
+      ],
+      "parts": [
+        {
+          "part_id": "power_plug",
+          "name": "Power plug",
+          "aliases": [],
+          "reference_image": null,
+          "diagram_label": null
+        },
+        {
+          "part_id": "machine",
+          "name": "Machine",
+          "aliases": [],
+          "reference_image": "components.png",
+          "diagram_label": null
+        },
+        {
+          "part_id": "water_tank",
+          "name": "Removable water tank",
+          "aliases": [
+            "water reservoir"
+          ],
+          "reference_image": "components.png",
+          "diagram_label": "A"
+        }
+      ],
+      "steps": [
+        {
+          "step_id": "s1",
+          "part_id": "power_plug",
+          "action": "unplug",
+          "instruction": "Unplug the machine.",
+          "cause_ids": [],
+          "source": {
+            "kind": "project_policy",
+            "pdf_page": null,
+            "region": null,
+            "policy_id": "unplugged_only_v1"
+          },
+          "reference_image": null,
+          "preconditions": [
+            "Machine is off and idle; no active pressure or steam cycle."
+          ],
+          "completion_mode": "tap",
+          "completion_condition": "User confirms the plug is disconnected.",
+          "safety_class": "project_safety"
+        },
+        {
+          "step_id": "s2",
+          "part_id": "machine",
+          "action": "confirm_cool",
+          "instruction": "Wait until the machine and removable parts are cool before handling them.",
+          "cause_ids": [],
+          "source": {
+            "kind": "project_policy",
+            "pdf_page": null,
+            "region": null,
+            "policy_id": "unplugged_only_v1"
+          },
+          "reference_image": null,
+          "preconditions": [
+            "Machine is unplugged."
+          ],
+          "completion_mode": "tap",
+          "completion_condition": "User confirms the machine and parts are cool.",
+          "safety_class": "project_safety"
+        },
+        {
+          "step_id": "s3",
+          "part_id": "water_tank",
+          "action": "fill",
+          "instruction": "Refill the water tank.",
+          "cause_ids": [
+            "empty_tank"
+          ],
+          "source": {
+            "kind": "manual",
+            "pdf_page": 19,
+            "region": [
+              0.34,
+              0.178,
+              0.96,
+              0.205
+            ],
+            "policy_id": null
+          },
+          "reference_image": "components.png",
+          "preconditions": [
+            "unplugged",
+            "cool",
+            "Applicable cause confirmed by user."
+          ],
+          "completion_mode": "tap",
+          "completion_condition": "User confirms: Refill the water tank.",
+          "safety_class": "unpowered_external"
+        },
+        {
+          "step_id": "s4",
+          "part_id": "water_tank",
+          "action": "seat",
+          "instruction": "Press the water tank fully down into its seated position.",
+          "cause_ids": [
+            "loose_tank"
+          ],
+          "source": {
+            "kind": "manual",
+            "pdf_page": 19,
+            "region": [
+              0.34,
+              0.208,
+              0.96,
+              0.252
+            ],
+            "policy_id": null
+          },
+          "reference_image": "components.png",
+          "preconditions": [
+            "unplugged",
+            "cool",
+            "Applicable cause confirmed by user."
+          ],
+          "completion_mode": "tap",
+          "completion_condition": "User confirms: Press the water tank fully down into its seated position.",
+          "safety_class": "unpowered_external"
+        }
+      ],
+      "scope_note": "Only the empty-tank and unseated-tank branches are covered. A full, seated tank needs other diagnosis. Grind, dose, blocked basket and descaling branches are excluded. Confirm the cause after the two safety steps; never run all branches by default.",
+      "entry_condition": "Machine is off and idle; no active pressure or steam cycle.",
+      "result_label": "Intervention completed; outcome unverified."
+    },
+    {
+      "appliance_id": "breville-bes500",
+      "manual_version": "f0a5e4024b1c57996b4a4771dc7ae9b5f29ff931fa915ec4b40569761dd8012f",
+      "procedure_id": "P05",
+      "procedure_version": 1,
+      "status": "draft",
+      "reviewer": null,
+      "reviewed_at": null,
+      "symptom": "Espresso leaks around the portafilter edge",
+      "symptom_aliases": [
+        "Coffee leaks around the handle",
+        "Coffee escapes around the filter holder",
+        "Portafilter seal is leaking"
+      ],
+      "causes": [
+        {
+          "cause_id": "dirty_rim",
+          "description": "Coffee grounds are on the filter basket rim.",
+          "confirmation_question": "Are coffee grounds visible on the filter basket rim?"
+        },
+        {
+          "cause_id": "loose_portafilter",
+          "description": "The portafilter is not correctly locked into the group head.",
+          "confirmation_question": "Was the portafilter incompletely inserted or locked?"
+        }
+      ],
+      "parts": [
+        {
+          "part_id": "power_plug",
+          "name": "Power plug",
+          "aliases": [],
+          "reference_image": null,
+          "diagram_label": null
+        },
+        {
+          "part_id": "machine",
+          "name": "Machine",
+          "aliases": [],
+          "reference_image": "components.png",
+          "diagram_label": null
+        },
+        {
+          "part_id": "filter_basket",
+          "name": "Filter basket",
+          "aliases": [
+            "basket rim"
+          ],
+          "reference_image": "accessories.png",
+          "diagram_label": "E / F"
+        },
+        {
+          "part_id": "portafilter",
+          "name": "Portafilter",
+          "aliases": [
+            "filter holder"
+          ],
+          "reference_image": "components.png",
+          "diagram_label": "F"
+        }
+      ],
+      "steps": [
+        {
+          "step_id": "s1",
+          "part_id": "power_plug",
+          "action": "unplug",
+          "instruction": "Unplug the machine.",
+          "cause_ids": [],
+          "source": {
+            "kind": "project_policy",
+            "pdf_page": null,
+            "region": null,
+            "policy_id": "unplugged_only_v1"
+          },
+          "reference_image": null,
+          "preconditions": [
+            "Machine is off and idle; no active pressure or steam cycle."
+          ],
+          "completion_mode": "tap",
+          "completion_condition": "User confirms the plug is disconnected.",
+          "safety_class": "project_safety"
+        },
+        {
+          "step_id": "s2",
+          "part_id": "machine",
+          "action": "confirm_cool",
+          "instruction": "Wait until the machine and removable parts are cool before handling them.",
+          "cause_ids": [],
+          "source": {
+            "kind": "project_policy",
+            "pdf_page": null,
+            "region": null,
+            "policy_id": "unplugged_only_v1"
+          },
+          "reference_image": null,
+          "preconditions": [
+            "Machine is unplugged."
+          ],
+          "completion_mode": "tap",
+          "completion_condition": "User confirms the machine and parts are cool.",
+          "safety_class": "project_safety"
+        },
+        {
+          "step_id": "s3",
+          "part_id": "filter_basket",
+          "action": "clean",
+          "instruction": "Clear coffee grounds from the basket rim.",
+          "cause_ids": [
+            "dirty_rim"
+          ],
+          "source": {
+            "kind": "manual",
+            "pdf_page": 20,
+            "region": [
+              0.34,
+              0.342,
+              0.96,
+              0.401
+            ],
+            "policy_id": null
+          },
+          "reference_image": "accessories.png",
+          "preconditions": [
+            "unplugged",
+            "cool",
+            "Applicable cause confirmed by user."
+          ],
+          "completion_mode": "tap",
+          "completion_condition": "User confirms: Clear coffee grounds from the basket rim.",
+          "safety_class": "unpowered_external"
+        },
+        {
+          "step_id": "s4",
+          "part_id": "portafilter",
+          "action": "rotate",
+          "instruction": "Fully insert the portafilter and rotate it until resistance is felt.",
+          "cause_ids": [
+            "loose_portafilter",
+            "dirty_rim"
+          ],
+          "source": {
+            "kind": "manual",
+            "pdf_page": 20,
+            "region": [
+              0.34,
+              0.295,
+              0.96,
+              0.339
+            ],
+            "policy_id": null
+          },
+          "reference_image": "components.png",
+          "preconditions": [
+            "unplugged",
+            "cool",
+            "Applicable cause confirmed by user."
+          ],
+          "completion_mode": "tap",
+          "completion_condition": "User confirms: Fully insert the portafilter and rotate it until resistance is felt.",
+          "safety_class": "unpowered_external"
+        }
+      ],
+      "scope_note": "Covers rim contamination and incorrect portafilter insertion. Refit after rim cleaning. Excess dose is another manual cause and is excluded from this draft; do not infer that every edge leak is a seal defect. No gasket replacement or internal work.",
+      "entry_condition": "Machine is off and idle; no active pressure or steam cycle.",
+      "result_label": "Intervention completed; outcome unverified."
+    },
+    {
+      "appliance_id": "breville-bes500",
+      "manual_version": "f0a5e4024b1c57996b4a4771dc7ae9b5f29ff931fa915ec4b40569761dd8012f",
+      "procedure_id": "P10",
+      "procedure_version": 1,
+      "status": "draft",
+      "reviewer": null,
+      "reviewed_at": null,
+      "symptom": "Water leaks from the machine",
+      "symptom_aliases": [
+        "Water pooling beneath the coffee machine",
+        "Drip tray is overflowing",
+        "Water collecting on the counter"
+      ],
+      "causes": [
+        {
+          "cause_id": "full_tray",
+          "description": "The drip tray full indicator is showing.",
+          "confirmation_question": "Does the drip tray show its full indicator?"
+        },
+        {
+          "cause_id": "loose_tray",
+          "description": "The drip tray is not fully seated.",
+          "confirmation_question": "Is the drip tray not fully pushed into position?"
+        },
+        {
+          "cause_id": "loose_tank",
+          "description": "The water tank is not fully seated.",
+          "confirmation_question": "Is the water tank raised or not fully seated?"
+        }
+      ],
+      "parts": [
+        {
+          "part_id": "power_plug",
+          "name": "Power plug",
+          "aliases": [],
+          "reference_image": null,
+          "diagram_label": null
+        },
+        {
+          "part_id": "machine",
+          "name": "Machine",
+          "aliases": [],
+          "reference_image": "components.png",
+          "diagram_label": null
+        },
+        {
+          "part_id": "drip_tray",
+          "name": "Removable drip tray",
+          "aliases": [],
+          "reference_image": "components.png",
+          "diagram_label": "K"
+        },
+        {
+          "part_id": "water_tank",
+          "name": "Removable water tank",
+          "aliases": [],
+          "reference_image": "components.png",
+          "diagram_label": "A"
+        }
+      ],
+      "steps": [
+        {
+          "step_id": "s1",
+          "part_id": "power_plug",
+          "action": "unplug",
+          "instruction": "Unplug the machine.",
+          "cause_ids": [],
+          "source": {
+            "kind": "project_policy",
+            "pdf_page": null,
+            "region": null,
+            "policy_id": "unplugged_only_v1"
+          },
+          "reference_image": null,
+          "preconditions": [
+            "Machine is off and idle; no active pressure or steam cycle."
+          ],
+          "completion_mode": "tap",
+          "completion_condition": "User confirms the plug is disconnected.",
+          "safety_class": "project_safety"
+        },
+        {
+          "step_id": "s2",
+          "part_id": "machine",
+          "action": "confirm_cool",
+          "instruction": "Wait until the machine and removable parts are cool before handling them.",
+          "cause_ids": [],
+          "source": {
+            "kind": "project_policy",
+            "pdf_page": null,
+            "region": null,
+            "policy_id": "unplugged_only_v1"
+          },
+          "reference_image": null,
+          "preconditions": [
+            "Machine is unplugged."
+          ],
+          "completion_mode": "tap",
+          "completion_condition": "User confirms the machine and parts are cool.",
+          "safety_class": "project_safety"
+        },
+        {
+          "step_id": "s3",
+          "part_id": "drip_tray",
+          "action": "empty",
+          "instruction": "Empty the drip tray.",
+          "cause_ids": [
+            "full_tray"
+          ],
+          "source": {
+            "kind": "manual",
+            "pdf_page": 21,
+            "region": [
+              0.34,
+              0.468,
+              0.96,
+              0.577
+            ],
+            "policy_id": null
+          },
+          "reference_image": "components.png",
+          "preconditions": [
+            "unplugged",
+            "cool",
+            "Applicable cause confirmed by user."
+          ],
+          "completion_mode": "tap",
+          "completion_condition": "User confirms: Empty the drip tray.",
+          "safety_class": "unpowered_external"
+        },
+        {
+          "step_id": "s4",
+          "part_id": "drip_tray",
+          "action": "seat",
+          "instruction": "Push the drip tray firmly into position.",
+          "cause_ids": [
+            "full_tray",
+            "loose_tray"
+          ],
+          "source": {
+            "kind": "manual",
+            "pdf_page": 21,
+            "region": [
+              0.34,
+              0.468,
+              0.96,
+              0.577
+            ],
+            "policy_id": null
+          },
+          "reference_image": "components.png",
+          "preconditions": [
+            "unplugged",
+            "cool",
+            "Applicable cause confirmed by user."
+          ],
+          "completion_mode": "tap",
+          "completion_condition": "User confirms: Push the drip tray firmly into position.",
+          "safety_class": "unpowered_external"
+        },
+        {
+          "step_id": "s5",
+          "part_id": "water_tank",
+          "action": "seat",
+          "instruction": "Press the water tank fully down into its seated position.",
+          "cause_ids": [
+            "loose_tank"
+          ],
+          "source": {
+            "kind": "manual",
+            "pdf_page": 21,
+            "region": [
+              0.34,
+              0.58,
+              0.96,
+              0.624
+            ],
+            "policy_id": null
+          },
+          "reference_image": "components.png",
+          "preconditions": [
+            "unplugged",
+            "cool",
+            "Applicable cause confirmed by user."
+          ],
+          "completion_mode": "tap",
+          "completion_condition": "User confirms: Press the water tank fully down into its seated position.",
+          "safety_class": "unpowered_external"
+        }
+      ],
+      "scope_note": "Covers tray capacity/position and an unseated tank only. Auto-purge is manual context, not an instruction to run steam. Stop and seek support for other or persistent leaks. Never inspect internal electrical components.",
+      "entry_condition": "Machine is off and idle; no active pressure or steam cycle.",
+      "result_label": "Intervention completed; outcome unverified."
+    }
+  ]
+}

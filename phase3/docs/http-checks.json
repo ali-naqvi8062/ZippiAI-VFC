@@ -1,0 +1,6 @@
+{
+  "homepage": 200,
+  "dataset": 200,
+  "reject_missing_header": 403,
+  "reject_incomplete_test_set": 422
+}

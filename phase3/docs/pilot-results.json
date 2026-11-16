@@ -1,0 +1,571 @@
+{
+  "split": "dev",
+  "image_count": 5,
+  "real_photo_count": 5,
+  "ambiguous_pairs_excluded": 0,
+  "benchmark_sha256": null,
+  "summary": {
+    "visible_pairs": 9,
+    "correct_iou50": 0,
+    "accuracy_iou50": 0.0,
+    "absent_pairs": 2,
+    "false_positive_count": 1
+  },
+  "per_part": {
+    "water_tank": {
+      "visible_pairs": 0,
+      "correct_iou50": 0,
+      "accuracy_iou50": null,
+      "absent_pairs": 0,
+      "false_positive_count": 0
+    },
+    "drip_tray": {
+      "visible_pairs": 3,
+      "correct_iou50": 0,
+      "accuracy_iou50": 0.0,
+      "absent_pairs": 0,
+      "false_positive_count": 0
+    },
+    "portafilter": {
+      "visible_pairs": 1,
+      "correct_iou50": 0,
+      "accuracy_iou50": 0.0,
+      "absent_pairs": 0,
+      "false_positive_count": 0
+    },
+    "filter_basket": {
+      "visible_pairs": 0,
+      "correct_iou50": 0,
+      "accuracy_iou50": null,
+      "absent_pairs": 0,
+      "false_positive_count": 0
+    },
+    "steam_wand": {
+      "visible_pairs": 4,
+      "correct_iou50": 0,
+      "accuracy_iou50": 0.0,
+      "absent_pairs": 0,
+      "false_positive_count": 0
+    },
+    "tank_lid": {
+      "visible_pairs": 0,
+      "correct_iou50": 0,
+      "accuracy_iou50": null,
+      "absent_pairs": 0,
+      "false_positive_count": 0
+    },
+    "control_panel": {
+      "visible_pairs": 1,
+      "correct_iou50": 0,
+      "accuracy_iou50": 0.0,
+      "absent_pairs": 2,
+      "false_positive_count": 1
+    }
+  },
+  "latency_seconds": {
+    "p50": 13.992791200056672,
+    "p95": 17.555618450045586
+  },
+  "records": [
+    {
+      "image_id": "193531dcf7980f9bed0362ffcf30dc6a1ca5a573179a3b6c19cc634bc391ef46",
+      "part_id": "steam_wand",
+      "truth": {
+        "visibility": "visible",
+        "bbox": [
+          0.545,
+          0.26,
+          0.61,
+          0.6
+        ]
+      },
+      "prediction": {
+        "part_id": "steam_wand",
+        "visibility": "candidate",
+        "bbox": [
+          0.4255241852640454,
+          0.18463578542073567,
+          0.6074776154398267,
+          0.9314790852864583
+        ],
+        "score": 0.5637402534484863,
+        "candidates": [
+          {
+            "bbox": [
+              0.4255241852640454,
+              0.18463578542073567,
+              0.6074776154398267,
+              0.9314790852864583
+            ],
+            "score": 0.5637402534484863
+          }
+        ],
+        "model": "IDEA-Research/grounding-dino-tiny",
+        "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+        "prompt": "steam wand.",
+        "box_threshold": 0.35,
+        "text_threshold": 0.25,
+        "inference_seconds": 17.29134689993225,
+        "load_seconds": 30.49770070007071,
+        "total_seconds": 47.78904960001819,
+        "note": "Model candidate, not verified identity. No detection does not prove absence."
+      },
+      "iou": 0.155339317170834
+    },
+    {
+      "image_id": "193531dcf7980f9bed0362ffcf30dc6a1ca5a573179a3b6c19cc634bc391ef46",
+      "part_id": "drip_tray",
+      "truth": {
+        "visibility": "visible",
+        "bbox": [
+          0.429,
+          0.735,
+          0.59,
+          0.86
+        ]
+      },
+      "prediction": {
+        "part_id": "drip_tray",
+        "visibility": "candidate",
+        "bbox": [
+          0.42522288671608177,
+          0.18458137512207032,
+          0.6071422139152152,
+          0.9311890665690105
+        ],
+        "score": 0.4619549810886383,
+        "candidates": [
+          {
+            "bbox": [
+              0.42522288671608177,
+              0.18458137512207032,
+              0.6071422139152152,
+              0.9311890665690105
+            ],
+            "score": 0.4619549810886383
+          },
+          {
+            "bbox": [
+              0.8392785911351606,
+              0.7345501708984375,
+              0.9991227447009478,
+              0.8383550008138021
+            ],
+            "score": 0.43362942337989807
+          }
+        ],
+        "model": "IDEA-Research/grounding-dino-tiny",
+        "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+        "prompt": "drip tray.",
+        "box_threshold": 0.35,
+        "text_threshold": 0.25,
+        "inference_seconds": 13.992791200056672,
+        "load_seconds": 2.600019797682762e-06,
+        "total_seconds": 13.992794800084084,
+        "note": "Model candidate, not verified identity. No detection does not prove absence."
+      },
+      "iou": 0.14817146955650654
+    },
+    {
+      "image_id": "c704999e58a98166b3ed1ab3e36556baed68f10b1579ac51c8b64f7204e7d62c",
+      "part_id": "steam_wand",
+      "truth": {
+        "visibility": "visible",
+        "bbox": [
+          0.537,
+          0.106,
+          0.674,
+          0.666
+        ]
+      },
+      "prediction": {
+        "part_id": "steam_wand",
+        "visibility": "candidate",
+        "bbox": [
+          0,
+          0,
+          0.999960911527593,
+          0.9998854616855053
+        ],
+        "score": 0.4998060166835785,
+        "candidates": [
+          {
+            "bbox": [
+              0,
+              0,
+              0.999960911527593,
+              0.9998854616855053
+            ],
+            "score": 0.4998060166835785
+          }
+        ],
+        "model": "IDEA-Research/grounding-dino-tiny",
+        "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+        "prompt": "steam wand.",
+        "box_threshold": 0.35,
+        "text_threshold": 0.25,
+        "inference_seconds": 12.461723499931395,
+        "load_seconds": 8.998904377222061e-07,
+        "total_seconds": 12.461724799824879,
+        "note": "Model candidate, not verified identity. No detection does not prove absence."
+      },
+      "iou": 0.07673178771446179
+    },
+    {
+      "image_id": "c704999e58a98166b3ed1ab3e36556baed68f10b1579ac51c8b64f7204e7d62c",
+      "part_id": "control_panel",
+      "truth": {
+        "visibility": "absent",
+        "bbox": null
+      },
+      "prediction": {
+        "part_id": "control_panel",
+        "visibility": "not_detected",
+        "bbox": null,
+        "score": null,
+        "candidates": [],
+        "model": "IDEA-Research/grounding-dino-tiny",
+        "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+        "prompt": "control panel buttons.",
+        "box_threshold": 0.35,
+        "text_threshold": 0.25,
+        "inference_seconds": 14.010012699989602,
+        "load_seconds": 7.00121745467186e-07,
+        "total_seconds": 14.010014200117439,
+        "note": "Model candidate, not verified identity. No detection does not prove absence."
+      },
+      "iou": 0.0
+    },
+    {
+      "image_id": "a145706932318bf5471153a6f5cef5680d4c5cab28cecfa89cdeafee925853c6",
+      "part_id": "steam_wand",
+      "truth": {
+        "visibility": "visible",
+        "bbox": [
+          0.51,
+          0.35,
+          0.58,
+          0.57
+        ]
+      },
+      "prediction": {
+        "part_id": "steam_wand",
+        "visibility": "candidate",
+        "bbox": [
+          0.7858139038085937,
+          0.5978902689615886,
+          0.9511979675292969,
+          0.8027330525716145
+        ],
+        "score": 0.5346753597259521,
+        "candidates": [
+          {
+            "bbox": [
+              0.7858139038085937,
+              0.5978902689615886,
+              0.9511979675292969,
+              0.8027330525716145
+            ],
+            "score": 0.5346753597259521
+          },
+          {
+            "bbox": [
+              0.14056646347045898,
+              0.06996232350667318,
+              0.6984579467773437,
+              0.7184929911295573
+            ],
+            "score": 0.47601118683815
+          }
+        ],
+        "model": "IDEA-Research/grounding-dino-tiny",
+        "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+        "prompt": "steam wand.",
+        "box_threshold": 0.35,
+        "text_threshold": 0.25,
+        "inference_seconds": 16.815969799878076,
+        "load_seconds": 9.0012326836586e-07,
+        "total_seconds": 16.815971300005913,
+        "note": "Model candidate, not verified identity. No detection does not prove absence."
+      },
+      "iou": 0.0
+    },
+    {
+      "image_id": "a145706932318bf5471153a6f5cef5680d4c5cab28cecfa89cdeafee925853c6",
+      "part_id": "drip_tray",
+      "truth": {
+        "visibility": "visible",
+        "bbox": [
+          0.285,
+          0.48,
+          0.49,
+          0.74
+        ]
+      },
+      "prediction": {
+        "part_id": "drip_tray",
+        "visibility": "candidate",
+        "bbox": [
+          0.6760177612304688,
+          0.41757105509440107,
+          0.9797562408447266,
+          0.8005486551920573
+        ],
+        "score": 0.764887809753418,
+        "candidates": [
+          {
+            "bbox": [
+              0.6760177612304688,
+              0.41757105509440107,
+              0.9797562408447266,
+              0.8005486551920573
+            ],
+            "score": 0.764887809753418
+          }
+        ],
+        "model": "IDEA-Research/grounding-dino-tiny",
+        "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+        "prompt": "drip tray.",
+        "box_threshold": 0.35,
+        "text_threshold": 0.25,
+        "inference_seconds": 17.81989000015892,
+        "load_seconds": 1.00000761449337e-06,
+        "total_seconds": 17.81989140016958,
+        "note": "Model candidate, not verified identity. No detection does not prove absence."
+      },
+      "iou": 0.0
+    },
+    {
+      "image_id": "a145706932318bf5471153a6f5cef5680d4c5cab28cecfa89cdeafee925853c6",
+      "part_id": "portafilter",
+      "truth": {
+        "visibility": "visible",
+        "bbox": [
+          0.123,
+          0.39,
+          0.447,
+          0.68
+        ]
+      },
+      "prediction": {
+        "part_id": "portafilter",
+        "visibility": "candidate",
+        "bbox": [
+          0.1407441520690918,
+          0.07000502904256185,
+          0.6987001037597657,
+          0.7192213439941406
+        ],
+        "score": 0.7724882960319519,
+        "candidates": [
+          {
+            "bbox": [
+              0.1407441520690918,
+              0.07000502904256185,
+              0.6987001037597657,
+              0.7192213439941406
+            ],
+            "score": 0.7724882960319519
+          }
+        ],
+        "model": "IDEA-Research/grounding-dino-tiny",
+        "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+        "prompt": "portafilter.",
+        "box_threshold": 0.35,
+        "text_threshold": 0.25,
+        "inference_seconds": 16.06234740000218,
+        "load_seconds": 9.0012326836586e-07,
+        "total_seconds": 16.06234890013002,
+        "note": "Model candidate, not verified identity. No detection does not prove absence."
+      },
+      "iou": 0.2417502787983427
+    },
+    {
+      "image_id": "01b25ac24687e6860a4128436a40aa8ffce89d910a88cbf5745c3b734386680e",
+      "part_id": "steam_wand",
+      "truth": {
+        "visibility": "visible",
+        "bbox": [
+          0.42,
+          0.15,
+          0.59,
+          0.49
+        ]
+      },
+      "prediction": {
+        "part_id": "steam_wand",
+        "visibility": "candidate",
+        "bbox": [
+          0.0012150406837463379,
+          0.00012439489364624023,
+          0.75901904296875,
+          0.8569366048177083
+        ],
+        "score": 0.564696729183197,
+        "candidates": [
+          {
+            "bbox": [
+              0.0012150406837463379,
+              0.00012439489364624023,
+              0.75901904296875,
+              0.8569366048177083
+            ],
+            "score": 0.564696729183197
+          },
+          {
+            "bbox": [
+              0.39427970377604166,
+              0.1614382832845052,
+              0.7215087076822917,
+              0.7429720052083333
+            ],
+            "score": 0.4288995563983917
+          }
+        ],
+        "model": "IDEA-Research/grounding-dino-tiny",
+        "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+        "prompt": "steam wand.",
+        "box_threshold": 0.35,
+        "text_threshold": 0.25,
+        "inference_seconds": 11.125123600009829,
+        "load_seconds": 8.00006091594696e-07,
+        "total_seconds": 11.125125000020489,
+        "note": "Model candidate, not verified identity. No detection does not prove absence."
+      },
+      "iou": 0.08901953001016252
+    },
+    {
+      "image_id": "01b25ac24687e6860a4128436a40aa8ffce89d910a88cbf5745c3b734386680e",
+      "part_id": "drip_tray",
+      "truth": {
+        "visibility": "visible",
+        "bbox": [
+          0.02,
+          0.435,
+          0.43,
+          0.735
+        ]
+      },
+      "prediction": {
+        "part_id": "drip_tray",
+        "visibility": "candidate",
+        "bbox": [
+          0.0011270642280578613,
+          7.480382919311523e-05,
+          0.764703369140625,
+          0.8570985514322916
+        ],
+        "score": 0.7169457674026489,
+        "candidates": [
+          {
+            "bbox": [
+              0.0011270642280578613,
+              7.480382919311523e-05,
+              0.764703369140625,
+              0.8570985514322916
+            ],
+            "score": 0.7169457674026489
+          }
+        ],
+        "model": "IDEA-Research/grounding-dino-tiny",
+        "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+        "prompt": "drip tray.",
+        "box_threshold": 0.35,
+        "text_threshold": 0.25,
+        "inference_seconds": 11.162074600113556,
+        "load_seconds": 8.998904377222061e-07,
+        "total_seconds": 11.162076100008562,
+        "note": "Model candidate, not verified identity. No detection does not prove absence."
+      },
+      "iou": 0.18795756595661572
+    },
+    {
+      "image_id": "01b25ac24687e6860a4128436a40aa8ffce89d910a88cbf5745c3b734386680e",
+      "part_id": "control_panel",
+      "truth": {
+        "visibility": "absent",
+        "bbox": null
+      },
+      "prediction": {
+        "part_id": "control_panel",
+        "visibility": "candidate",
+        "bbox": [
+          0.0010634660720825195,
+          0.00010699033737182617,
+          0.757982177734375,
+          0.8554371744791667
+        ],
+        "score": 0.6576231718063354,
+        "candidates": [
+          {
+            "bbox": [
+              0.0010634660720825195,
+              0.00010699033737182617,
+              0.757982177734375,
+              0.8554371744791667
+            ],
+            "score": 0.6576231718063354
+          }
+        ],
+        "model": "IDEA-Research/grounding-dino-tiny",
+        "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+        "prompt": "control panel buttons.",
+        "box_threshold": 0.35,
+        "text_threshold": 0.25,
+        "inference_seconds": 11.568292799871415,
+        "load_seconds": 9.0012326836586e-07,
+        "total_seconds": 11.568294099997729,
+        "note": "Model candidate, not verified identity. No detection does not prove absence."
+      },
+      "iou": 0.0
+    },
+    {
+      "image_id": "ed69be93e840e5c288ea279ac7938c8604416f43042a0956bfcffee05cf4a626",
+      "part_id": "control_panel",
+      "truth": {
+        "visibility": "visible",
+        "bbox": [
+          0.135,
+          0.15,
+          0.622,
+          0.39
+        ]
+      },
+      "prediction": {
+        "part_id": "control_panel",
+        "visibility": "candidate",
+        "bbox": [
+          0.09857189178466796,
+          0.000772327184677124,
+          0.99721435546875,
+          0.9961762237548828
+        ],
+        "score": 0.4297054409980774,
+        "candidates": [
+          {
+            "bbox": [
+              0.09857189178466796,
+              0.000772327184677124,
+              0.99721435546875,
+              0.9961762237548828
+            ],
+            "score": 0.4297054409980774
+          }
+        ],
+        "model": "IDEA-Research/grounding-dino-tiny",
+        "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+        "prompt": "control panel buttons.",
+        "box_threshold": 0.35,
+        "text_threshold": 0.25,
+        "inference_seconds": 11.780681199859828,
+        "load_seconds": 7.00121745467186e-07,
+        "total_seconds": 11.780682499986142,
+        "note": "Model candidate, not verified identity. No detection does not prove absence."
+      },
+      "iou": 0.13066339251346926
+    }
+  ],
+  "claim": "Small public-photo pilot; approximate visually reviewed labels; no generalisation or independent held-out accuracy claim",
+  "evaluation_protocol": "small-public-photo-pilot",
+  "run_id": "1794002207091627700"
+}

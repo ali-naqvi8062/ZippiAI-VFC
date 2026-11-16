@@ -1,0 +1,137 @@
+[
+  {
+    "session": "train-18",
+    "part": "portafilter",
+    "prediction": {
+      "part_id": "portafilter",
+      "visibility": "candidate",
+      "bbox": [
+        0.13947413444519044,
+        0.4369702657063802,
+        0.34391571044921876,
+        0.6500179036458333
+      ],
+      "score": 0.5917019248008728,
+      "candidates": [
+        {
+          "bbox": [
+            0.13947413444519044,
+            0.4369702657063802,
+            0.34391571044921876,
+            0.6500179036458333
+          ],
+          "score": 0.5917019248008728
+        }
+      ],
+      "model": "IDEA-Research/grounding-dino-tiny",
+      "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+      "prompt": "black handle.",
+      "box_threshold": 0.35,
+      "text_threshold": 0.25,
+      "inference_seconds": 16.39740899996832,
+      "load_seconds": 5.784181100083515,
+      "total_seconds": 22.181591300060973,
+      "note": "Model candidate, not verified identity. No detection does not prove absence."
+    },
+    "truth": {
+      "visibility": "visible",
+      "bbox": [
+        0.123,
+        0.39,
+        0.447,
+        0.68
+      ]
+    },
+    "iou": 0.463556778036158
+  },
+  {
+    "session": "train-17",
+    "part": "steam_wand",
+    "prediction": {
+      "part_id": "steam_wand",
+      "visibility": "candidate",
+      "bbox": [
+        0,
+        0,
+        0.9999535093916223,
+        0.9998244265292553
+      ],
+      "score": 0.43111908435821533,
+      "candidates": [
+        {
+          "bbox": [
+            0,
+            0,
+            0.9999535093916223,
+            0.9998244265292553
+          ],
+          "score": 0.43111908435821533
+        }
+      ],
+      "model": "IDEA-Research/grounding-dino-tiny",
+      "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+      "prompt": "metal tube.",
+      "box_threshold": 0.35,
+      "text_threshold": 0.25,
+      "inference_seconds": 10.9097176999785,
+      "load_seconds": 2.9001384973526e-06,
+      "total_seconds": 10.909721500007436,
+      "note": "Model candidate, not verified identity. No detection does not prove absence."
+    },
+    "truth": {
+      "visibility": "visible",
+      "bbox": [
+        0.537,
+        0.106,
+        0.674,
+        0.666
+      ]
+    },
+    "iou": 0.07673703991373561
+  },
+  {
+    "session": "test-01",
+    "part": "drip_tray",
+    "prediction": {
+      "part_id": "drip_tray",
+      "visibility": "candidate",
+      "bbox": [
+        0.0010745227336883545,
+        0.000330120325088501,
+        0.7632327473958334,
+        0.8570335286458334
+      ],
+      "score": 0.670193612575531,
+      "candidates": [
+        {
+          "bbox": [
+            0.0010745227336883545,
+            0.000330120325088501,
+            0.7632327473958334,
+            0.8570335286458334
+          ],
+          "score": 0.670193612575531
+        }
+      ],
+      "model": "IDEA-Research/grounding-dino-tiny",
+      "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+      "prompt": "metal tray.",
+      "box_threshold": 0.35,
+      "text_threshold": 0.25,
+      "inference_seconds": 11.9423986999318,
+      "load_seconds": 9.0012326836586e-07,
+      "total_seconds": 11.942400200059637,
+      "note": "Model candidate, not verified identity. No detection does not prove absence."
+    },
+    "truth": {
+      "visibility": "visible",
+      "bbox": [
+        0.02,
+        0.435,
+        0.43,
+        0.735
+      ]
+    },
+    "iou": 0.18837769396128715
+  }
+]

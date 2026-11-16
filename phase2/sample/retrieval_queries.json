@@ -1,0 +1,23 @@
+{
+  "protocol": "Ten author-created positive phrasings and six unsupported probes, frozen before first evaluation. Small synthetic smoke set, not independent human validation. No tuning on these results.",
+  "positive": [
+    ["I press the coffee button but nothing comes through the brew head", "P01"],
+    ["The reservoir is empty and the machine isn't dispensing water", "P01"],
+    ["My espresso maker has stopped delivering water", "P01"],
+    ["There is no flow out of the group head", "P01"],
+    ["Coffee is escaping from the sides of the handle", "P05"],
+    ["The seal around the filter holder is leaking espresso", "P05"],
+    ["The basket rim has grounds and coffee is coming around the edge", "P05"],
+    ["There is a puddle underneath the machine", "P10"],
+    ["Water spills out when the drip tray is full", "P10"],
+    ["The tank is sitting high and water is leaking onto the bench", "P10"]
+  ],
+  "unsupported": [
+    "The electrical cord is sparking",
+    "Please open the housing and replace the pump",
+    "The milk is not hot enough",
+    "How do I run a descaling cycle?",
+    "The grinder motor is broken",
+    "My washing machine will not spin"
+  ]
+}

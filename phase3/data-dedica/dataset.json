@@ -1,0 +1,164 @@
+{
+  "appliance_id": "delonghi-dedica-family-pilot",
+  "images": [
+    {
+      "id": "193531dcf7980f9bed0362ffcf30dc6a1ca5a573179a3b6c19cc634bc391ef46",
+      "session": "train-03",
+      "split": "dev",
+      "kind": "real_photo",
+      "lighting": "Online photo; capture lighting unknown",
+      "angle": "Mixed views; see photo",
+      "width": 1464,
+      "height": 600,
+      "labels": {
+        "steam_wand": {
+          "visibility": "visible",
+          "bbox": [
+            0.545,
+            0.26,
+            0.61,
+            0.6
+          ]
+        },
+        "drip_tray": {
+          "visibility": "visible",
+          "bbox": [
+            0.429,
+            0.735,
+            0.59,
+            0.86
+          ]
+        }
+      }
+    },
+    {
+      "id": "c704999e58a98166b3ed1ab3e36556baed68f10b1579ac51c8b64f7204e7d62c",
+      "session": "train-17",
+      "split": "dev",
+      "kind": "real_photo",
+      "lighting": "Online photo; capture lighting unknown",
+      "angle": "Mixed views; see photo",
+      "width": 470,
+      "height": 470,
+      "labels": {
+        "steam_wand": {
+          "visibility": "visible",
+          "bbox": [
+            0.537,
+            0.106,
+            0.674,
+            0.666
+          ]
+        },
+        "control_panel": {
+          "visibility": "absent",
+          "bbox": null
+        }
+      }
+    },
+    {
+      "id": "a145706932318bf5471153a6f5cef5680d4c5cab28cecfa89cdeafee925853c6",
+      "session": "train-18",
+      "split": "dev",
+      "kind": "real_photo",
+      "lighting": "Online photo; capture lighting unknown",
+      "angle": "Mixed views; see photo",
+      "width": 800,
+      "height": 600,
+      "labels": {
+        "steam_wand": {
+          "visibility": "visible",
+          "bbox": [
+            0.51,
+            0.35,
+            0.58,
+            0.57
+          ]
+        },
+        "drip_tray": {
+          "visibility": "visible",
+          "bbox": [
+            0.285,
+            0.48,
+            0.49,
+            0.74
+          ]
+        },
+        "portafilter": {
+          "visibility": "visible",
+          "bbox": [
+            0.123,
+            0.39,
+            0.447,
+            0.68
+          ]
+        }
+      }
+    },
+    {
+      "id": "01b25ac24687e6860a4128436a40aa8ffce89d910a88cbf5745c3b734386680e",
+      "session": "test-01",
+      "split": "dev",
+      "kind": "real_photo",
+      "lighting": "Online photo; capture lighting unknown",
+      "angle": "Mixed views; see photo",
+      "width": 1500,
+      "height": 1500,
+      "labels": {
+        "steam_wand": {
+          "visibility": "visible",
+          "bbox": [
+            0.42,
+            0.15,
+            0.59,
+            0.49
+          ]
+        },
+        "drip_tray": {
+          "visibility": "visible",
+          "bbox": [
+            0.02,
+            0.435,
+            0.43,
+            0.735
+          ]
+        },
+        "control_panel": {
+          "visibility": "absent",
+          "bbox": null
+        }
+      }
+    },
+    {
+      "id": "ed69be93e840e5c288ea279ac7938c8604416f43042a0956bfcffee05cf4a626",
+      "session": "test-03",
+      "split": "dev",
+      "kind": "real_photo",
+      "lighting": "Online photo; capture lighting unknown",
+      "angle": "Mixed views; see photo",
+      "width": 800,
+      "height": 800,
+      "labels": {
+        "control_panel": {
+          "visibility": "visible",
+          "bbox": [
+            0.135,
+            0.15,
+            0.622,
+            0.39
+          ]
+        }
+      }
+    }
+  ],
+  "frozen": false,
+  "evaluation_protocol": "small-public-photo-pilot",
+  "minimum_test_photos": 3,
+  "required_parts": [
+    "steam_wand",
+    "drip_tray",
+    "control_panel"
+  ],
+  "annotation_author": "Assistant visual review; approximate boxes, not manufacturer-verified",
+  "scope": "Dedica family inferred visually; exact SKUs unverified. All images are exploratory dev images, including original source test images. No model training or prompt tuning performed."
+}
